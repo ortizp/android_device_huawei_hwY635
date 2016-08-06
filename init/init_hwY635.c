@@ -57,11 +57,19 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
             break;
 
     /* Y635-L03 */
-    else if (strstr(model, "Y635-L03") != NULL) {
+   if (strstr(model, "Y635-L03") != NULL) {
         property_set("ro.product.model", "Y635-L03");
         property_set("ro.product.name", "Y635-L03");
         property_set("ro.product.device", "Y635-L03");
         property_set("ro.build.product", "Y635-L03");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L01 */
+   else if (strstr(model, "Y635-L01") != NULL) {
+        property_set("ro.product.model", "Y635-L01");
+        property_set("ro.product.name", "Y635-L01");
+        property_set("ro.product.device", "Y635-L01");
+        property_set("ro.build.product", "Y635-L01");
         property_set("ro.telephony.default_network", "9");
     }
 }
