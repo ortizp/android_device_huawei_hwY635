@@ -1,1 +1,1 @@
-add_lunch_combo cm_g620s-userdebug
+add_lunch_combo cm_hwY635-userdebug
