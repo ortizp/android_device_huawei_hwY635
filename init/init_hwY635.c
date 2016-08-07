@@ -72,4 +72,20 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.product", "Y635-L01");
         property_set("ro.telephony.default_network", "9");
     }
+    /* Y550-L01 */
+   else if (strstr(model, "Y550-L01") != NULL) {
+        property_set("ro.product.model", "Y550-L01");
+        property_set("ro.product.name", "Y550-L01");
+        property_set("ro.product.device", "Y550-L01");
+        property_set("ro.build.product", "Y550-L01");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y550-L02 */
+   else if (strstr(model, "Y550-L02") != NULL) {
+        property_set("ro.product.model", "Y550-L02");
+        property_set("ro.product.name", "Y550-L02");
+        property_set("ro.product.device", "Y550-L02");
+        property_set("ro.build.product", "Y550-L02");
+        property_set("ro.telephony.default_network", "9");
+    }
 }
