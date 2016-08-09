@@ -25,4 +25,4 @@ Camera  | 5 MP, 2592 х 1944 pixels
 * GPS
 
 #BROKEN:
-* Camera
+* Camera (install fix and camera working 3.1MP)
