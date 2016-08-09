@@ -56,20 +56,28 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         if (strstr(model, "huawei_fac_product_name") != NULL)
             break;
 
-    /* Y635-L03 */
-   if (strstr(model, "Y635-L03") != NULL) {
-        property_set("ro.product.model", "Y635-L03");
-        property_set("ro.product.name", "Y635-L03");
-        property_set("ro.product.device", "Y635-L03");
-        property_set("ro.build.product", "Y635-L03");
-        property_set("ro.telephony.default_network", "9");
-    }
     /* Y635-L01 */
-   else if (strstr(model, "Y635-L01") != NULL) {
+   if (strstr(model, "Y635-L01") != NULL) {
         property_set("ro.product.model", "Y635-L01");
         property_set("ro.product.name", "Y635-L01");
         property_set("ro.product.device", "Y635-L01");
         property_set("ro.build.product", "Y635-L01");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L02 */
+   else if (strstr(model, "Y635-L02") != NULL) {
+        property_set("ro.product.model", "Y635-L02");
+        property_set("ro.product.name", "Y635-L02");
+        property_set("ro.product.device", "Y635-L02");
+        property_set("ro.build.product", "Y635-L02");
+        property_set("ro.telephony.default_network", "9");
+    }
+    /* Y635-L03 */
+   else if (strstr(model, "Y635-L03") != NULL) {
+        property_set("ro.product.model", "Y635-L03");
+        property_set("ro.product.name", "Y635-L03");
+        property_set("ro.product.device", "Y635-L03");
+        property_set("ro.build.product", "Y635-L03");
         property_set("ro.telephony.default_network", "9");
     }
     /* Y550-L01 */
@@ -86,6 +94,14 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.name", "Y550-L02");
         property_set("ro.product.device", "Y550-L02");
         property_set("ro.build.product", "Y550-L02");
+        property_set("ro.telephony.default_network", "7");
+    }
+    /* Y550-L03 */
+   else if (strstr(model, "Y550-L03") != NULL) {
+        property_set("ro.product.model", "Y550-L03");
+        property_set("ro.product.name", "Y550-L03");
+        property_set("ro.product.device", "Y550-L03");
+        property_set("ro.build.product", "Y550-L03");
         property_set("ro.telephony.default_network", "9");
     }
 }
