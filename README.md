@@ -23,6 +23,4 @@ Camera  | 5 MP, 2592 х 1944 pixels
 * Wifi
 * Auto-rotate
 * GPS
-
-#BROKEN:
-* Camera (install fix and camera working 3.1MP)
+* Camera (3.1MP)
