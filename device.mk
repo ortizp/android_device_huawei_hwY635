@@ -97,7 +97,7 @@ PRODUCT_COPY_FILES += \
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # ANT+ stack
 PRODUCT_PACKAGES += \
@@ -126,6 +126,10 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     libmm-omxcore \
     libqomx_core
+
+# Snap Camera
+PRODUCT_PACKAGES += \
+    Snap
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -179,17 +183,16 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    libdashplayer \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
+    libOmxVdecHevc \
     libOmxVenc \
-    libdivxdrmdecrypt \
-    libstagefrighthw \
-    libdashplayer \
-    qcmediaplayer
+    libstagefrighthw 
 
 # Power
 PRODUCT_PACKAGES += \

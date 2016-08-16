@@ -17,12 +17,12 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from c8817d device
-$(call inherit-product, device/huawei/hwY635/hwY635.mk)
+# Inherit from hwY635 device
+$(call inherit-product, device/huawei/hwY635/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := full_hwY635
 PRODUCT_DEVICE := hwY635
 PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := HUAWEI
-PRODUCT_MODEL := Ascend Y635 LTE
+PRODUCT_MODEL := Huawei Y635 LTE
