@@ -79,8 +79,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.device", "Y635-L03");
         property_set("ro.build.product", "Y635-L03");
         property_set("ro.telephony.default_network", "9");
-	property_set("ro.build.description", "Y635-L03-user 4.4.4 GRJ90 C69B003 release-keys");
-        property_set("ro.build.fingerprint", "Huawei/Y635-L03/hwY635:4.4.4/HuaweiY635-L03/C69B003:user/release-keys");
     }
     /* Y635-L21 */
    else if (strstr(model, "Y635-L21") != NULL) {

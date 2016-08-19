@@ -14,13 +14,9 @@
 # limitations under the License.
 #
 
-# inherit from the proprietary version
 -include vendor/huawei/hwY635/BoardConfigVendor.mk
 
 LOCAL_PATH := device/huawei/hwY635
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := hwY635,hwy635,Y635,y635,Y635-01,Y635-L02,Y635-L03,Y635-L21
 
 # DPM NSRM Feature
 TARGET_LDPRELOAD := libNimsWrap.so
@@ -45,10 +41,10 @@ TARGET_BOARD_SUFFIX := _32
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
-AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
-AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
+TARGET_USES_QCOM_MM_AUDIO := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD := false
+AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
+AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
 BOARD_USES_ALSA_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DHUAWEI_SOUND_PARAM_PATH=\"/system/etc/sound_param/g620s_l01l02\"
 
@@ -63,15 +59,15 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_USES_LEGACY_MMAP := true
 TARGET_USE_VENDOR_CAMERA_EXT := true
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_SHOW_PERCENTAGE := true
-
 # CMHW
 BOARD_HARDWARE_CLASS := device/huawei/hwY635/cmhw
 
 # Enables CSVT
 TARGET_USES_CSVT := true
+
+# Enable suspend during charger mode
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := true
@@ -109,13 +105,13 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=disable
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE        := 0x80000000
 BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
-TARGET_KERNEL_SOURCE := kernel/huawei/msm8916
+TARGET_KERNEL_SOURCE := kernel/huawei/hwY635
 TARGET_KERNEL_CONFIG := cm_hwY635_defconfig
 TARGET_SELINUX_CONFIG := cm_hwY635_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
@@ -132,6 +128,9 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1879048192
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 4513037312
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
+
+# Libc extensions
+BOARD_PROVIDES_ADDITIONAL_BIONIC_STATIC_LIBS += libc_huawei_symbols
 
 # Offmode Charging
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(LOCAL_PATH)/charger/images
@@ -183,6 +182,9 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_IMPL := dlmalloc
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := hwY635,hwy635,Y635,y635,Y635-01,Y635-L02,Y635-L03,Y635-L21
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file

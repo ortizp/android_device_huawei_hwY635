@@ -24,4 +24,3 @@ Camera  | 5 MP, 2592 х 1944 pixels
 * Auto-rotate
 * GPS
 * Camera (3.1MP)
-* SELinux enforcing
