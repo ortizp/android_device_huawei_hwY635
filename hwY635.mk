@@ -127,6 +127,10 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libqomx_core
 
+# Snap Camera
+PRODUCT_PACKAGES += \
+    Snap
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
