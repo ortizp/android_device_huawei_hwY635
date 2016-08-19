@@ -1,1 +1,1 @@
-add_lunch_combo cm_hwY635-userdebug
+add_lunch_combo orion_hwY635-userdebug

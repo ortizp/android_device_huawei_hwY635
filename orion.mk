@@ -20,8 +20,8 @@ $(call inherit-product, device/huawei/hwY635/full_hwY635.mk)
 TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/maxi/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/orion/config/common_full_phone.mk)
 
-PRODUCT_NAME := maxi_hwY635
+PRODUCT_NAME := orion_hwY635
 PRODUCT_DEVICE := hwY635
