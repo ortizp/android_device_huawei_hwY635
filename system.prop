@@ -18,6 +18,10 @@ persist.radio.rat_on=combine
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 
+# Maxi
+ro.product.device=hwY635
+ro.product.model=Huawei Y635 LTE
+
 # Display
 debug.composition.type=c2d
 debug.sf.gpu_comp_tiling=1
